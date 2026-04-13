@@ -29,23 +29,18 @@ class Solution {
         ListNode temphead= new ListNode(0);
         ListNode temp =temphead;
         ListNode midhead = prev;
-        ListNode newhead = head;
+
         while (midhead!=null){
-            if (newhead.next!=null){
-                temp.next=newhead;
+            if (head.next!=null){
+                temp.next=head;
                 temp=temp.next;
-                newhead=newhead.next;
+                head=head.next;
             }
             temp.next=midhead;
             temp=temp.next;
             midhead=midhead.next;
         }
         head=temphead.next;
-        // while(midhead.next!=null){
-        //     temp = temp.next;
-        //     midhead = midhead.next;
-        //     newhead = newhead.next;
-        // }
-        // System.out.print(newhead);
+    
     }
 }
